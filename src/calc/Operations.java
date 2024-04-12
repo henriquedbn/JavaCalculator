@@ -55,7 +55,7 @@ public class Operations {
                     numbers.push(result);
                     break;
                 case EXPONENTIATION:
-                    result = Math.pow(num1,num2);
+                    result = Math.pow(num2,num1);
                     numbers.push(result);
                     break;
                 case SQUAREROOT:

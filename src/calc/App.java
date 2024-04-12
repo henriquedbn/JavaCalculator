@@ -164,7 +164,6 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 operationStack.operation(Operations.OperationType.SQUAREROOT);
-                numberStack.push(0);
                 screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
             }
         });
@@ -174,7 +173,6 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 operationStack.operation(Operations.OperationType.LOG10);
-                numberStack.push(0);
                 screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
             }
         });
