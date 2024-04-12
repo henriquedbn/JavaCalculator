@@ -22,6 +22,11 @@ public class App {
     private JButton minusButton;
     private JButton multButton;
     private JButton divButton;
+    private JButton expButton;
+    private JButton sqrtButton;
+    private JButton logButton;
+    private JButton prcButton;
+    private JButton numPi;
 
     public App() {
         NumStack numberStack = new NumStack();
@@ -29,7 +34,7 @@ public class App {
         resultButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                long result = operationStack.resolve(numberStack);
+                double result = operationStack.resolve(numberStack);
                 numberStack.setCurrentNumber(result);
                 screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
             }
@@ -105,11 +110,19 @@ public class App {
             }
         });
 
+        numPi.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                numberStack.addToCurrent(Math.PI);
+                screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
+            }
+        });
+
         plusButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 operationStack.operation(Operations.OperationType.ADDITION);
-                numberStack.push(0L);
+                numberStack.push(0);
                 screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
             }
         });
@@ -117,7 +130,7 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 operationStack.operation(Operations.OperationType.SUBTRACTION);
-                numberStack.push(0L);
+                numberStack.push(0);
                 screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
             }
         });
@@ -125,7 +138,7 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 operationStack.operation(Operations.OperationType.MULTIPLICATION);
-                numberStack.push(0L);
+                numberStack.push(0);
                 screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
             }
         });
@@ -135,11 +148,48 @@ public class App {
             @Override
             public void actionPerformed(ActionEvent e) {
                 operationStack.operation(Operations.OperationType.DIVISION);
-                numberStack.push(0L);
+                numberStack.push(0);
+                screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
+            }
+        });
+        expButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operationStack.operation(Operations.OperationType.EXPONENTIATION);
+                numberStack.push(0);
+                screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
+            }
+        });
+        sqrtButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operationStack.operation(Operations.OperationType.SQUAREROOT);
+                numberStack.push(0);
+                screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
+            }
+        });
+
+
+        logButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operationStack.operation(Operations.OperationType.LOG10);
+                numberStack.push(0);
+                screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
+            }
+        });
+
+
+        prcButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                operationStack.operation(Operations.OperationType.PERCENTILE);
+                numberStack.push(0);
                 screenField.setText(String.valueOf(numberStack.getCurrentNumber()));
             }
         });
     }
+
 
     public static void main(String[] args) {
         JFrame window = new JFrame("App");

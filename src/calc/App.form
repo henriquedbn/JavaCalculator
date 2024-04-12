@@ -188,6 +188,61 @@
           <text value=""/>
         </properties>
       </component>
+      <component id="b2dcb" class="javax.swing.JButton" binding="expButton">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="42" height="42"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="calc/img/btn_expo.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="97003" class="javax.swing.JButton" binding="sqrtButton">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="42" height="42"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="calc/img/btn_sqrt.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ad1bb" class="javax.swing.JButton" binding="logButton">
+        <constraints>
+          <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="42" height="42"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="calc/img/btn_log.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ccefd" class="javax.swing.JButton" binding="prcButton">
+        <constraints>
+          <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="42" height="42"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="calc/img/btn_percent.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ceabc" class="javax.swing.JButton" binding="numPi">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <maximum-size width="42" height="42"/>
+          </grid>
+        </constraints>
+        <properties>
+          <icon value="calc/img/btn_pi.png"/>
+          <text value=""/>
+        </properties>
+      </component>
     </children>
   </grid>
 </form>

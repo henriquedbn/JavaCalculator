@@ -4,22 +4,22 @@ import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class NumStack{
-    private Stack<Long> calculation = new Stack<>();
+    private Stack<Double> calculation = new Stack<>();
 
-    public void addToCurrent(int buttonPressed){
-        long currentNumber = calculation.isEmpty() ? 0 : calculation.pop();
+    public void addToCurrent(double buttonPressed){
+        double currentNumber = calculation.isEmpty() ? 0 : calculation.pop();
         calculation.push(currentNumber*10+buttonPressed);
     }
 
-    public long getCurrentNumber(){
+    public double getCurrentNumber(){
         return calculation.isEmpty() ? 0: calculation.peek();
     }
 
-    public void setCurrentNumber(long number){
+    public void setCurrentNumber(double number){
         calculation.push(number);
     }
 
-    public void push(long number){
+    public void push(double number){
         calculation.push(number);
     }
 
@@ -27,7 +27,7 @@ public class NumStack{
         return calculation.isEmpty();
     }
 
-    public long pop(){
+    public double pop(){
         if (calculation.isEmpty()) {
             throw new EmptyStackException();
         }
