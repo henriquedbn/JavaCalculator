@@ -1,5 +1,6 @@
 package src.calc;
 
+import java.util.EmptyStackException;
 import java.util.Stack;
 
 public class NumStack{
@@ -14,6 +15,10 @@ public class NumStack{
         return calculation.isEmpty() ? 0: calculation.peek();
     }
 
+    public void setCurrentNumber(long number){
+        calculation.push(number);
+    }
+
     public void push(long number){
         calculation.push(number);
     }
@@ -23,6 +28,9 @@ public class NumStack{
     }
 
     public long pop(){
+        if (calculation.isEmpty()) {
+            throw new EmptyStackException();
+        }
         return calculation.pop();
     }
 
